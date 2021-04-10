@@ -1,0 +1,6 @@
+.user-name-header {
+  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

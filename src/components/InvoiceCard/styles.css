@@ -1,0 +1,22 @@
+.invoice-card {
+  margin-top: 8px;
+  background-color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.part {
+  margin: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.month {
+  background-color: var(--primary);
+}
+
+.bill {
+  background-color: var(--accent);
+}
