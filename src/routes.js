@@ -25,11 +25,9 @@ const AppRoutes = () => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <Routes>
-          <Route path="/" element={<Login />}></Route>
-        </Routes>
         <RegisterProvider>
           <Routes>
+            <Route path="/" element={<Login />}></Route>
             <Route path="/home" element={<Home />}></Route>
           </Routes>
         </RegisterProvider>

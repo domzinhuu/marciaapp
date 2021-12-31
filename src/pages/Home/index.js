@@ -11,7 +11,8 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [completName] = useState(getCompleteName());
-  const { registers, getRegister } = useContext(RegisterContext);
+  const { month, registers, getRegister } = useContext(RegisterContext);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const Home = () => {
       navigate("/");
       return;
     }
-    getRegister();
+    getRegister(month);
   }, []);
 
   return (

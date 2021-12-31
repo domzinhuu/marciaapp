@@ -14,12 +14,13 @@ export const RegisterProvider = ({ children }) => {
   const [userId] = useState(getUserId());
   const navigate = useNavigate();
 
-  const getRegister = async () => {
+  const getRegister = async (selectedMonth) => {
     try {
       const userId = getUserId();
+      setMonth(selectedMonth);
       const response = await registerService.loadRegisters(
         userId,
-        month,
+        selectedMonth,
         new Date().getFullYear()
       );
       setTotalValue((response.totalValue / 100).toFixed(2));

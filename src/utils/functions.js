@@ -1,4 +1,5 @@
 export const getMonthName = (monthNumber) => {
+  console.log(monthNumber);
   const monthList = [
     "Janeiro",
     "Fevereiro",

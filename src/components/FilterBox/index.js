@@ -12,7 +12,7 @@ import { RegisterContext } from "../../context/register.context";
 import { formatToMoney } from "../../utils/functions";
 
 const FilterBox = () => {
-  const { month, setMonth, totalValue } = useContext(RegisterContext);
+  const { month, totalValue, getRegister } = useContext(RegisterContext);
   return (
     <Box
       sx={{
@@ -43,7 +43,9 @@ const FilterBox = () => {
             id="demo-simple-select"
             label="Age"
             value={month}
-            onChange={(e) => setMonth(e.target.value)}
+            onChange={(e) => {
+              getRegister(e.target.value);
+            }}
           >
             <MenuItem value="Janeiro">Janeiro</MenuItem>
             <MenuItem value="Fevereiro">Fevereiro</MenuItem>
