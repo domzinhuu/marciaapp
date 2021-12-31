@@ -26,7 +26,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Box sx={{ background: "#333", height: "100%" }}>
+    <Box sx={{ background: "#333", height: "100%", minHeight: "100vh" }}>
       <Header />
       <Box sx={{ p: 2 }}>
         <LoggedUser name={completName} />

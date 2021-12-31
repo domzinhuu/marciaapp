@@ -32,7 +32,7 @@ export default function Login() {
   }, []);
 
   const setInitialData = (data) => {
-    setUserName(data.username);
+    setUserName(data.username.toLowerCase());
     setPassword(data.password);
     setRemember(true);
   };
